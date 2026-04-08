@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_OWNER="Cantara"
-REPO_NAME="devops"
+REPO_OWNER="MessomDigital"
+REPO_NAME="install"
 #REF="4a4479ddc6ff6d0ad6274655f328f2759b70be6c"
 REF="master"
 REMOTE_DIR="scripts"
