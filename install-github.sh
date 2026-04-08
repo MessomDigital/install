@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+REPO_OWNER="MessomDigital"
+REPO_NAME="install"
+#REF="4a4479ddc6ff6d0ad6274655f328f2759b70be6c"
+REF="master"
 REMOTE_DIR="scripts"
 DEST_DIR="scripts"
 
 # If you prefer a branch instead of a pinned commit, change REF to e.g. "main".
-BASE_URL="https://repo.messom.no/install/${REMOTE_DIR}"
+BASE_URL="https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${REF}/${REMOTE_DIR}"
 
 FILES=(
   "CRON"
