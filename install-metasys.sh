@@ -58,4 +58,4 @@ mv "${DEST_DIR}/GETTING_STARTED.md" "./GETTING_STARTED.md"
 chmod +x "${DEST_DIR}"/*.sh 2>/dev/null || true
 
 echo "Done. Downloaded ${#FILES[@]} file(s) into ./${DEST_DIR}/"
-echo "Please follow the instructions in GETTING_STARTED.md to set up the Metasys Cloud Connector."
+
