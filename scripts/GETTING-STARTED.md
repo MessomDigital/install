@@ -1,4 +1,4 @@
-# Setup Metasys Cloudconnector
+# Setup insructions
 
 After running the installation script, please update
 1. Update local_override.properties
