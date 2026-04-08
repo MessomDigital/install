@@ -16,7 +16,7 @@ FILES=(
   "semantic_update_service.properties"
   "semantic_update_service.sh"
   "start-service.sh"
-  "GETTING_STARTED.md"
+  "GETTING-STARTED.md"
 )
 
 DESIGO_FILES=(
