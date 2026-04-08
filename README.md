@@ -1,10 +1,18 @@
 # install
 Install Messom Digital products
 
-Linux
+Base install
 ============
 
 Please run install.sh
 ```bash
 curl -fsSL https://repo.messom.no/install/install.sh | bash
+```
+
+Metasys Cloudconnector
+============
+
+Please run install-metasys.sh
+```bash
+curl -fsSL https://repo.messom.no/install/install-metasys.sh | bash
 ```

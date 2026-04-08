@@ -22,6 +22,7 @@ METASYS_FILES=(
   "local_override-template.properties"
   "semantic_update_service.properties"
   "update-rec-mapping.sh"
+  "GETTING_STARTED.md"
 )
 
 mkdir -p "${DEST_DIR}"
@@ -51,8 +52,10 @@ for f in "${METASYS_FILES[@]}"; do
 done
 
 mv "${DEST_DIR}/local_override-template.properties" "./local_override.properties"
+mv "${DEST_DIR}/GETTING_STARTED.md" "./GETTING_STARTED.md"
 
 # Make shell scripts executable
 chmod +x "${DEST_DIR}"/*.sh 2>/dev/null || true
 
 echo "Done. Downloaded ${#FILES[@]} file(s) into ./${DEST_DIR}/"
+echo "Please follow the instructions in GETTING_STARTED.md to set up the Metasys Cloud Connector."
