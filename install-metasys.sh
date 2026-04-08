@@ -16,13 +16,13 @@ FILES=(
   "semantic_update_service.properties"
   "semantic_update_service.sh"
   "start-service.sh"
+  "GETTING_STARTED.md"
 )
 
 METASYS_FILES=(
   "local_override-template.properties"
   "semantic_update_service.properties"
   "update-rec-mapping.sh"
-  "GETTING_STARTED.md"
 )
 
 mkdir -p "${DEST_DIR}"
