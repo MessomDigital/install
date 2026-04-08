@@ -6,7 +6,7 @@ DEST_DIR="scripts"
 METASYS_DIR="metasys"
 
 # If you prefer a branch instead of a pinned commit, change REF to e.g. "main".
-BASE_URL="https://repo.messom.no/install/${REMOTE_DIR}"
+BASE_URL="https://repo.messom.no/install/"
 
 FILES=(
   "CRON"
@@ -42,12 +42,12 @@ download() {
 
 for f in "${FILES[@]}"; do
   echo "Downloading ${REMOTE_DIR}/${f} -> ${DEST_DIR}/${f}"
-  download "${BASE_URL}/${f}" "${DEST_DIR}/${f}"
+  download "${BASE_URL}/${REMOTE_DIR}/${f}" "${DEST_DIR}/${f}"
 done
 
 for f in "${METASYS_FILES[@]}"; do
   echo "Downloading ${METASYS_DIR}/${f} -> ${DEST_DIR}/${f}"
-  download "${BASE_URL}/${f}" "${DEST_DIR}/${f}"
+  download "${BASE_URL}/${METASYS_DIR}/${f}" "${DEST_DIR}/${f}"
 done
 
 mv "${DEST_DIR}/local_override-template.properties" "./local_override.properties"
