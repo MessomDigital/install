@@ -1,0 +1,24 @@
+{
+  "connectionString": "InstrumentationKey=---TODO---",
+  "role": {
+    "name": "MetasysCloudconnector",
+    "instance": "prod"
+  },
+  "selfDiagnostics": {
+    "destination": "file+console",
+    "level": "INFO",
+    "file": {
+      "path": "logs/applicationinsights.log",
+      "maxSizeMb": 5,
+      "maxHistory": 1
+    }
+  },
+  "sampling": {
+    "percentage": 100.0
+  },
+  "instrumentation": {
+    "logging": {
+      "level": "WARN"
+    }
+  }
+}
