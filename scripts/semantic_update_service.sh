@@ -33,8 +33,8 @@
 set -eo pipefail
 
 VERSION_PATTERN=*
-RELEASE_REPO=https://mvnrepo.cantara.no/content/repositories/releases
-SNAPSHOT_REPO=https://mvnrepo.cantara.no/content/repositories/snapshots
+RELEASE_REPO=https://repo.messom.no/maven/releases
+SNAPSHOT_REPO=https://repo.messom.no/maven/snapshots
 GROUP_ID=no/cantara/tools
 ARTIFACT_ID=visuale
 CLASSIFIER=

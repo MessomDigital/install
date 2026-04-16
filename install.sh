@@ -16,6 +16,10 @@ FILES=(
   "semantic_update_service.sh"
   "start-service.sh"
   "GETTING-STARTED.md"
+  "notify_service_stopped.sh"
+  "notify_startup.sh"
+  "notify_upgrade.sh"
+  "alert.properties"
 )
 
 mkdir -p "${DEST_DIR}"
