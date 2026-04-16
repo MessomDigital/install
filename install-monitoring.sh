@@ -40,4 +40,4 @@ chmod +x "${DEST_DIR}"/*.sh 2>/dev/null || true
 mv "${DEST_DIR}/azure_applicationinsights_template.json" "./azure_applicationinsights_template.json"
 
 echo "Done. Downloaded ${#FILES[@]} file(s) into ./${DEST_DIR}/"
-echo "Please rename, and update the azure_applicationinsights_template.json file with credentials."
+echo "Please rename, and update the azure_applicationinsights_template.json file with \"connectionString\" and \"role.name\"."
