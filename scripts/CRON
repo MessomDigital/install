@@ -1,1 +1,2 @@
 */3 * * * * ./scripts/download_and_restart_if_new.sh
+
