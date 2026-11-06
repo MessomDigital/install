@@ -1,9 +1,9 @@
 #!/bin/sh
-SEMANTIC_PROPERTIES_FILE=$(dirname $BASH_SOURCE)/alerts.properties
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+SEMANTIC_PROPERTIES_FILE="$SCRIPT_DIR/alert.properties"
 if [ -f "$SEMANTIC_PROPERTIES_FILE" ]; then
-    . $SEMANTIC_PROPERTIES_FILE
+    . "$SEMANTIC_PROPERTIES_FILE"
 fi
 
-SERVICE_VERSION=$( readlink $JAR_FILE)
-curl --location $SLACK_ALERT_PROD --header 'Content-Type: application/json' --data '{"text":":broken_heart: '"$SERVICE_NAME - $SERVICE_VERSION"' is not running "}'
-
+SERVICE_VERSION=$(readlink "$JAR_FILE" 2>/dev/null || echo "$JAR_FILE")
+curl --location "$SLACK_ALERT_PROD" --header 'Content-Type: application/json' --data '{"text":":broken_heart: '"$SERVICE_NAME - $SERVICE_VERSION"' is not running "}'

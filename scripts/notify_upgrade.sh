@@ -1,7 +1,8 @@
 #!/bin/sh
-SEMANTIC_PROPERTIES_FILE=$(dirname $BASH_SOURCE)/alert.properties
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+SEMANTIC_PROPERTIES_FILE="$SCRIPT_DIR/alert.properties"
 if [ -f "$SEMANTIC_PROPERTIES_FILE" ]; then
-    . $SEMANTIC_PROPERTIES_FILE
+    . "$SEMANTIC_PROPERTIES_FILE"
 fi
 
 SERVICE_VERSION=$( readlink $JAR_FILE)

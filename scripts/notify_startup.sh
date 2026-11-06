@@ -1,10 +1,10 @@
 #!/bin/sh
-SEMANTIC_PROPERTIES_FILE=$(dirname $BASH_SOURCE)/alert.properties
+SCRIPT_DIR=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+SEMANTIC_PROPERTIES_FILE="$SCRIPT_DIR/alert.properties"
 if [ -f "$SEMANTIC_PROPERTIES_FILE" ]; then
-    . $SEMANTIC_PROPERTIES_FILE
+    . "$SEMANTIC_PROPERTIES_FILE"
 fi
 
-SERVICE_VERSION=$( readlink $JAR_FILE)
+SERVICE_VERSION=$(readlink "$JAR_FILE" 2>/dev/null || echo "$JAR_FILE")
 
-curl --location $SLACK_INFO_PROD --header 'Content-Type: application/json' --data '{"text":":green_heart: Starting '"$SERVICE_NAME - $SERVICE_VERSION"' "}'
-
+curl --location "$SLACK_INFO_PROD" --header 'Content-Type: application/json' --data '{"text":":green_heart: Starting '"$SERVICE_NAME - $SERVICE_VERSION"' "}'
