@@ -16,6 +16,7 @@ FILES=(
   "README.md"
   "download_and_restart_if_new.sh"
   "kill-service.sh"
+  "service_monitor.sh"
   "semantic_update_service.properties"
   "semantic_update_service.sh"
   "start-service.sh"
